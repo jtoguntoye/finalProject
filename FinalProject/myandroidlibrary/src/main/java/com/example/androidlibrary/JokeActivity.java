@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 
 public class JokeActivity extends AppCompatActivity {
+    public static String JOKE_KEY = "Joke key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class EndpointAsyncTask  extends AsyncTask<Pair<Context, String>, Void, String> {
     private Context context;
-    private static MyEndpoint myEndpoint;
+    private static myApi myEndpoint;
 
 
     @Override
