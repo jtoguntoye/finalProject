@@ -46,13 +46,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @SuppressWarnings("unchecked")
     public void tellJoke(View view) {
-        Intent startJokeActivity = new Intent(this, JokeActivity.class);
-        JokeTeller jokeTeller = new JokeTeller();
-        joke = jokeTeller.getJoke();
-        startJokeActivity.putExtra(JokeActivity.JOKE_KEY, joke);
-        startActivity(startJokeActivity);
-        //Toast.makeText(this, joke, Toast.LENGTH_SHORT).show();
+        //start the asyncTask to get the joke from the backend
+        new EndpointAsyncTask(this).execute();
+
     }
 
 
